@@ -1,0 +1,33 @@
+{
+    "name": "slowlyo/slow-module-notice",
+    "alias": "通知公告管理",
+    "description": "SlowAdmin 扩展: 后台功能-通知公告管理",
+    "type": "library",
+    "version": "1.0.0",
+    "keywords": ["slow-admin", "extension", "notice"],
+    "homepage": "https://gitee.com/slowlyo/notice",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "slowlyo",
+            "email": "slowlyo_email@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "slowlyo/slow-admin": "~1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slowlyo\\Notice\\": "src/"
+        }
+    },
+    "extra": {
+        "slow-admin": "Slowlyo\\Notice\\NoticeServiceProvider",
+        "laravel": {
+            "providers": [
+                "Slowlyo\\Notice\\NoticeServiceProvider"
+            ]
+        }
+    }
+}
