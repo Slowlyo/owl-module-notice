@@ -3,7 +3,6 @@
     "alias": "通知公告管理",
     "description": "SlowAdmin 扩展: 后台功能-通知公告管理",
     "type": "library",
-    "version": "1.0.1",
     "keywords": ["slow-admin", "extension", "notice"],
     "homepage": "https://gitee.com/slowlyo/notice",
     "license": "MIT",
