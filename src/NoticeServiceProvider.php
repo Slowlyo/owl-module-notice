@@ -8,7 +8,6 @@ class NoticeServiceProvider extends ServiceProvider
 {
     protected $menu = [
         [
-            'parent'   => '',
             'title'    => '通知公告管理',
             'url'      => '/notice',
             'url_type' => '1',
