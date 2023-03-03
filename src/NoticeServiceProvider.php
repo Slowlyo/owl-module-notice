@@ -2,7 +2,7 @@
 
 namespace Slowlyo\Notice;
 
-use Slowlyo\SlowAdmin\Extend\ServiceProvider;
+use Slowlyo\OwlAdmin\Extend\ServiceProvider;
 
 class NoticeServiceProvider extends ServiceProvider
 {

@@ -2,9 +2,8 @@
 
 namespace Slowlyo\Notice\Models;
 
-use Arr;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Slowlyo\SlowAdmin\Models\BaseModel as Model;
+use Slowlyo\OwlAdmin\Models\BaseModel as Model;
 
 class Notice extends Model
 {

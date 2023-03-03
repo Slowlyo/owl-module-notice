@@ -1,4 +1,4 @@
-## SlowAdmin 通知公告管理
+## OwlAdmin 通知公告管理
 
 ## 效果
 

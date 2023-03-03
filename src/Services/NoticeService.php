@@ -2,10 +2,10 @@
 
 namespace Slowlyo\Notice\Services;
 
-use Arr;
+use Illuminate\Support\Arr;
 use Slowlyo\Notice\Models\Notice as Model;
 use Slowlyo\Notice\NoticeServiceProvider;
-use Slowlyo\SlowAdmin\Services\AdminService;
+use Slowlyo\OwlAdmin\Services\AdminService;
 
 class NoticeService extends AdminService
 {

@@ -3,21 +3,21 @@
 namespace Slowlyo\Notice\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Slowlyo\SlowAdmin\Renderers\Tpl;
-use Slowlyo\SlowAdmin\Renderers\Mapping;
+use Slowlyo\OwlAdmin\Renderers\Tpl;
+use Slowlyo\OwlAdmin\Renderers\Mapping;
 use Slowlyo\Notice\Models\Notice as Model;
 use Slowlyo\Notice\NoticeServiceProvider;
 use Slowlyo\Notice\Services\NoticeService;
-use Slowlyo\SlowAdmin\Renderers\TextControl;
-use Slowlyo\SlowAdmin\Renderers\TableColumn;
-use Slowlyo\SlowAdmin\Renderers\FormControl;
-use Slowlyo\SlowAdmin\Renderers\RadiosControl;
-use Slowlyo\SlowAdmin\Renderers\NumberControl;
-use Slowlyo\SlowAdmin\Renderers\SwitchControl;
-use Slowlyo\SlowAdmin\Renderers\SchemaPopOver;
-use Slowlyo\SlowAdmin\Renderers\SelectControl;
-use Slowlyo\SlowAdmin\Renderers\RichTextControl;
-use Slowlyo\SlowAdmin\Controllers\AdminController;
+use Slowlyo\OwlAdmin\Renderers\TextControl;
+use Slowlyo\OwlAdmin\Renderers\TableColumn;
+use Slowlyo\OwlAdmin\Renderers\FormControl;
+use Slowlyo\OwlAdmin\Renderers\RadiosControl;
+use Slowlyo\OwlAdmin\Renderers\NumberControl;
+use Slowlyo\OwlAdmin\Renderers\SwitchControl;
+use Slowlyo\OwlAdmin\Renderers\SchemaPopOver;
+use Slowlyo\OwlAdmin\Renderers\SelectControl;
+use Slowlyo\OwlAdmin\Renderers\RichTextControl;
+use Slowlyo\OwlAdmin\Controllers\AdminController;
 
 class NoticeController extends AdminController
 {
@@ -25,7 +25,7 @@ class NoticeController extends AdminController
 
     protected string $queryPath = 'notice';
 
-    protected \Slowlyo\SlowAdmin\Services\AdminService|NoticeService $service;
+    protected \Slowlyo\OwlAdmin\Services\AdminService|NoticeService $service;
 
     public function __construct()
     {
@@ -47,6 +47,10 @@ class NoticeController extends AdminController
     {
         $crud = $this->baseCRUD()
             ->quickSaveItemApi(admin_url('notice_quick_edit'))
+            ->headerToolbar([
+                $this->createButton(true, 'lg'),
+                ...$this->baseHeaderToolBar(),
+            ])
             ->filter(
                 $this->baseFilter()->body([
                     TextControl::make()->name('title')->label($this->trans('title'))->size('md'),
@@ -99,7 +103,7 @@ class NoticeController extends AdminController
                     ->label(__('admin.updated_at'))
                     ->type('datetime')
                     ->sortable(true),
-                $this->rowActions()->set('width', 200),
+                $this->rowActions(true, 'lg')->set('width', 200),
             ]);
 
         return $this->baseList($crud);
