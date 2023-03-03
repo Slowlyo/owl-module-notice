@@ -10,12 +10,12 @@
 
 #### zip 下载地址
 
-[https://gitee.com/slowlyo/slow-module-notice/repository/archive/master.zip](https://gitee.com/slowlyo/slow-module-notice/repository/archive/master.zip)
+[https://gitee.com/slowlyo/owl-module-notice/repository/archive/master.zip](https://gitee.com/slowlyo/owl-module-notice/repository/archive/master.zip)
 
 #### composer
 
 ```bash
-composer require slowlyo/slow-notice
+composer require slowlyo/owl-module-notice
 ```
 
 ## 使用说明
