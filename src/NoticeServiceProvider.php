@@ -14,17 +14,4 @@ class NoticeServiceProvider extends ServiceProvider
             'icon'     => 'material-symbols:format-list-bulleted',
         ],
     ];
-
-    public function register()
-    {
-        //
-    }
-
-    public function init()
-    {
-        parent::init();
-
-        //
-
-    }
 }
