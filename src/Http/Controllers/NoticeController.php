@@ -23,16 +23,7 @@ class NoticeController extends AdminController
 {
     protected string $serviceName = NoticeService::class;
 
-    protected string $queryPath = 'notice';
-
     protected \Slowlyo\OwlAdmin\Services\AdminService|NoticeService $service;
-
-    public function __construct()
-    {
-        parent::__construct();
-
-        $this->pageTitle = $this->trans('page_title');
-    }
 
     public function index()
     {
