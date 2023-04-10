@@ -25,15 +25,6 @@ class NoticeController extends AdminController
 
     protected \Slowlyo\OwlAdmin\Services\AdminService|NoticeService $service;
 
-    public function index()
-    {
-        if ($this->actionOfGetData()) {
-            return $this->response()->success($this->service->list());
-        }
-
-        return $this->response()->success($this->list());
-    }
-
     public function list()
     {
         $crud = $this->baseCRUD()

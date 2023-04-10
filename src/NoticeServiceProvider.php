@@ -11,7 +11,7 @@ class NoticeServiceProvider extends ServiceProvider
             'title'    => '通知公告管理',
             'url'      => '/notice',
             'url_type' => '1',
-            'icon'     => 'fa fa-stream',
+            'icon'     => 'material-symbols:format-list-bulleted',
         ],
     ];
 }
